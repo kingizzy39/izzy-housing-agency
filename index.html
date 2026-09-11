@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izzy Housing Agency - Paradise on a Budget</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="counter">0<span>%</span></div>
+            <div class="logo-mark">
+                <!-- Light variant (shown on dark background during preload) -->
+                <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 5L10 35H30L20 5Z" fill="none" stroke="#FBF6EC" stroke-width="2"/>
+                    <polyline points="15,20 20,15 25,20" fill="none" stroke="#FBF6EC" stroke-width="2"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Nav -->
+    <nav id="main-nav" class="nav-transparent">
+        <div class="nav-container">
+            <div class="logo">
+                <!-- Light variant (default) -->
+                <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="logo-light">
+                    <path d="M16 4L6 28H26L16 4Z" fill="none" stroke="#FBF6EC" stroke-width="1.5"/>
+                    <polyline points="12,16 16,10 20,16" fill="none" stroke="#FBF6EC" stroke-width="1.5"/>
+                </svg>
+                <!-- Dark variant (hidden by default) -->
+                <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="logo-dark">
+                    <path d="M16 4L6 28H26L16 4Z" fill="none" stroke="#14110F" stroke-width="1.5"/>
+                    <polyline points="12,16 16,10 20,16" fill="none" stroke="#14110F" stroke-width="1.5"/>
+                </svg>
+                <div class="logo-text">
+                    <span>IZZY</span>
+                    <span class="agency">HOUSING AGENCY</span>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#featured-homes">Featured Homes</a></li>
+                <li><a href="#our-cities">Our Cities</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+            </ul>
+            <a href="#book-viewing" class="cta-button">Book a Viewing</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="https://images.pexels.com/videos/854924/pexels-video-854924-small.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Paradise on a Budget.</h1>
+            <p class="hero-subtitle">Luxury homes across Lagos, Abuja &amp; Port Harcourt — without the luxury price tag. Izzy Housing Agency finds you the home that feels like a million dollars, for what it's actually worth.</p>
+            <div class="hero-actions">
+                <a href="#featured-homes" class="btn-primary">Explore Homes</a>
+                <a href="#how-it-works" class="btn-secondary">See How It Works →</a>
+            </div>
+            <div class="marquee">
+                <div class="marquee-track">
+                    <span>LAGOS • ABUJA • PORT HARCOURT • PARADISE ON A BUDGET •</span>
+                    <span>LAGOS • ABUJA • PORT HARCOURT • PARADISE ON A BUDGET •</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="section how-it-works">
+        <div class="section-header">
+            <h2 class="section-title">How We Work</h2>
+            <p class="section-subtitle">Our proven process for finding your perfect luxury home across Nigeria's premier markets.</p>
+        </div>
+        <div class="scrollytelling-container">
+            <div class="scrollytelling-image">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=60"
+                     alt="Luxury home exterior" loading="lazy">
+            </div>
+            <div class="scrollytelling-text">
+                <div class="step active" data-step="1">
+                    <h3>Discover</h3>
+                    <p>We scan 6 major platforms across Lagos, Abuja, and Port Harcourt to find underpriced luxury properties that match your criteria.</p>
+                </div>
+                <div class="step" data-step="2">
+                    <h3>Vet &amp; Negotiate</h3>
+                    <p>Our team personally verifies each listing, conducts inspections, and negotiates the best possible price on your behalf.</p>
+                </div>
+                <div class="step" data-step="3">
+                    <h3>Close &amp; Move In</h3>
+                    <p>We handle all paperwork, legal processes, and coordination to ensure a smooth transition into your new paradise.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Find Your Dream Home Section -->
+    <section id="find-home" class="section find-home">
+        <div class="section-header">
+            <h2 class="section-title">Find Your Dream Home</h2>
+            <p class="section-subtitle">See how our interactive property preview works in real-time.</p>
+        </div>
+        <div class="pin-container">
+            <div class="property-card" id="property-card">
+                <!-- Step 1: Property Photo -->
+                <div class="step step-1 active">
+                    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=60"
+                         alt="Luxury villa interior" loading="lazy">
+                    <div class="step-label">Property Photo</div>
+                </div>
+                <!-- Step 2: Price -->
+                <div class="step step-2">
+                    <div class="price-tag">₦450,000,000</div>
+                    <div class="step-label">Asking Price</div>
+                </div>
+                <!-- Step 3: Key Stats -->
+                <div class="step step-3">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-value">5</span>
+                            <span class="stat-label">Bedrooms</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">4.5</span>
+                            <span class="stat-label">Bathrooms</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">650</span>
+                            <span class="stat-label">sqm</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">Lagos</span>
+                            <span class="stat-label">Location</span>
+                        </div>
+                    </div>
+                    <div class="step-label">Key Details</div>
+                </div>
+                <!-- Step 4: CTA Button -->
+                <div class="step step-4">
+                    <button class="viewing-btn" id="schedule-viewing">Schedule a Private Viewing</button>
+                    <div class="step-label">Next Step</div>
+                </div>
+                <!-- Step 5: Success State -->
+                <div class="step step-5">
+                    <div class="success-icon">✓</div>
+                    <p class="success-text">Viewing request sent! Our team will contact you within 24 hours.</p>
+                    <div class="step-label">Complete</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Strip Section -->
+    <section id="stats" class="section stats">
+        <div class="stats-container">
+            <div class="stat-item" data-target="127">
+                <span class="stat-number">0</span>
+                <span class="stat-label">Homes Sold</span>
+            </div>
+            <div class="stat-item" data-target="35">
+                <span class="stat-number">0</span>
+                <span class="stat-label">Avg. Client Savings (%)</span>
+            </div>
+            <div class="stat-item" data-target="3">
+                <span class="stat-number">0</span>
+                <span class="stat-label">Cities Covered</span>
+            </div>
+            <div class="stat-item" data-target="45">
+                <span class="stat-number">0</span>
+                <span class="stat-label">Avg. Days to Close</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Listings Section -->
+    <section id="featured-homes" class="section featured-homes">
+        <div class="section-header">
+            <h2 class="section-title">Featured Listings</h2>
+            <p class="section-subtitle">Currently available luxury properties in our prime markets.</p>
+        </div>
+        <div class="listings-grid">
+            <!-- Listing 1 -->
+            <div class="listing-card">
+                <img src="https://images.unsplash.com/photo-1600566753190-16c9aacb76e7?auto=format&fit=crop&w=800&q=60"
+                     alt="Luxury mansion exterior" loading="lazy">
+                <div class="listing-info">
+                    <h3>Modern Villa in Ikoyi</h3>
+                    <p class="location">Ikoyi, Lagos • 6BR • 850sqm</p>
+                    <p class="price">₦620,000,000</p>
+                    <p class="description">Contemporary design with infinity pool, smart home technology, and panoramic lagoon views.</p>
+                    <a href="#" class="view-details">View Details →</a>
+                </div>
+            </div>
+            <!-- Listing 2 -->
+            <div class="listing-card">
+                <img src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?auto=format&fit=crop&w=800&q=60"
+                     alt="Luxury apartment interior" loading="lazy">
+                <div class="listing-info">
+                    <h3>Penthouse in Maitama</h3>
+                    <p location>Abuja • 4BR • 320sqm</p>
+                    <p class="price">₦480,000,000</p>
+                    <p class="description">Sky-high living with private terrace, 24/7 concierge, and access to premium amenities.</p>
+                    <a href="#" class="view-details">View Details →</a>
+                </div>
+            </div>
+            <!-- Listing 3 -->
+            <div class="listing-card">
+                <img src="https://images.unsplash.com/photo-1564013799919-ab600027ff46?auto=format&fit=crop&w=800&q=60"
+                     alt="Waterfront home exterior" loading="lazy">
+                <div class="listing-info">
+                    <h3>Waterfront Estate in PHC</h3>
+                    <p class="location">Port Harcourt • 5BR • 720sqm</p>
+                    <p class="price">₦390,000,000</p>
+                    <p class="description">Serene riverside living with private dock, lush gardens, and resort-style amenities.</p>
+                    <a href="#" class="view-details">View Details →</a>
+                </div>
+            </div>
+            <!-- Listing 4 -->
+            <div class="listing-card">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991746361?auto=format&fit=crop&w=800&q=60"
+                     alt="Modern villa exterior" loading="lazy">
+                <div class="listing-info">
+                    <h3>Contemporary Home in Lekki</h3>
+                    <p class="location">Lekki Phase 1 • 5BR • 580sqm</p>
+                    <p class="price">₦520,000,000</p>
+                    <p class="description">Architectural masterpiece with floor-to-ceiling glass, home theater, and tropical landscaping.</p>
+                    <a href="#" class="view-details">View Details →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials">
+        <div class="section-header">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <p class="section-subtitle">Experiences from homeowners across Lagos, Abuja, and Port Harcourt.</p>
+        </div>
+        <div class="testimonial-slider">
+            <div class="testimonial-slide active">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=60"
+                     alt="Client avatar" class="client-avatar" loading="lazy">
+                <p class="testimonial-text">"Izzy Housing Agency found us our dream home in Banana Island at 20% below market value. Their attention to detail and negotiation skills were exceptional."</p>
+                <p class="client-info">Tunde &amp; Adeola Johnson • Lagos</p>
+            </div>
+            <div class="testimonial-slide">
+                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=150&q=60"
+                     alt="Client avatar" class="client-avatar" loading="lazy">
+                <p class="testimonial-text">"As first-time luxury buyers, we were overwhelmed until Izzy guided us through every step. Now we're happily settled in our Asokoro villa."</p>
+                <p class="client-info">Chika &amp; Bello Ibrahim • Abuja</p>
+            </div>
+            <div class="testimonial-slide">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=60"
+                     alt="Client avatar" class="client-avatar" loading="lazy">
+                <p class="testimonial-text">"The team's local expertise in Port Harcourt was invaluable. They found us a waterfront property that exceeded all expectations."</p>
+                <p class="client-info">Dr. Franklin Okoli • Port Harcourt</p>
+            </div>
+        </div>
+        <div class="slider-nav">
+            <button class="nav-btn prev">&#9664;</button>
+            <button class="nav-btn next">&#9654;</button>
+        </div>
+    </section>
+
+    <!-- Our Cities Section -->
+    <section id="our-cities" class="section our-cities">
+        <div class="section-header">
+            <h2 class="section-title">Our Prime Markets</h2>
+            <p class="section-subtitle">Expertise across Nigeria's three most prestigious real estate landscapes.</p>
+        </div>
+        <div class="tabs-container">
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="lagos">Lagos</button>
+                <button class="tab-btn" data-tab="abuja">Abuja</button>
+                <button class="tab-btn" data-tab="port-harcourt">Port Harcourt</button>
+            </div>
+            <div class="tab-content">
+                <!-- Lagos Tab -->
+                <div class="tab-pane active" id="lagos-tab">
+                    <div class="city-content">
+                        <img src="https://images.unsplash.com/photo-1581091863072-47a4a553b5f2?auto=format&fit=crop&w=800&q=60"
+                             alt="Lagos skyline" class="city-image" loading="lazy">
+                        <div class="city-info">
+                            <h3>Lagos</h3>
+                            <p class="city-description">Nigeria's economic powerhouse offers unparalleled luxury living from Victoria Island's high-rises to Ikoyi's historic estates and Lekki's modern waterfront communities.</p>
+                            <div class="city-process">
+                                <div class="process-step">
+                                    <span class="step-number">1</span>
+                                    <span>Discover</span>
+                                </div>
+                                <div class="process-step">
+                                    <span class="step-number">2</span>
+                                    <span>Vet</span>
+                                </div>
+                                <div class="process-step">
+                                    <span class="step-number">3</span>
+                                    <span>Negotiate</span>
+                                </div>
+                                <div class="process-step">
+                                    <span class="step-number">4</span>
+                                    <span>Close</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Abuja Tab -->
+                <div class="tab-pane" id="abuja-tab">
+                    <div class="city-content">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=800&q=60"
+                             alt="Abuja aerial view" class="city-image" loading="lazy">
+                        <div class="city-info">
+                            <h3>Abuja</h3>
+                            <p class="city-description">The purpose-built capital features meticulously planned districts like Maitama and Asokoro, offering serene luxury living with world-class infrastructure and diplomatic security.</p>
+                            <div class="city-process">
+                                <div class="process-step">
+                                    <span class="step-number">1</span>
+                                    <span>Discover</span>
+                                </div>
+                                <div class="process-step">
+                                    <span class="step-number">2</span>
+                                    <span>Vet</span>
+                                </div>
+                                <div class="process-step">
+                                    <span class="step-number">3</span>
+                                    <span>Negotiate</span>
+                                </div>
+                                <div class="process-step">
+                                    <span class="step-number">4</span>
+                                    <span>Close</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Port Harcourt Tab -->
+                <div class="tab-pane" id="port-harcourt-tab">
+                    <div class="city-content">
+                        <img src="https://images.unsplash.com/photo-1550583724-b2692b85bcd5?auto=format&fit=crop&w=800&q=60"
+                             alt="Port Harcourt waterfront" class="city-image" loading="lazy">
+                        <div class="city-info">
+                            <h3>Port Harcourt</h3>
+                            <p class="city-description">The Garden City combines oil wealth with natural beauty, providing exclusive waterfront estates, lush GRA neighborhoods, and sophisticated urban living along the Bonny River.</p>
+                            <div class="city-process">
+                                <div class="process-step">
+                                    <span class="step-number">1</span>
+                                    <span>Discover</span>
+                                </div>
+                                <div class="process-step">
+                                    <span class="step-number">2</span>
+                                    <span>Vet</span>
+                                </div>
+                                <div class="process-step">
+                                    <span class="step-number">3</span>
+                                    <span>Negotiate</span>
+                                </div>
+                                <div class="process-step">
+                                    <span class="step-number">4</span>
+                                    <span>Close</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pick Your Dream Neighborhood Section -->
+    <section id="neighborhoods" class="section neighborhoods">
+        <div class="section-header">
+            <h2 class="section-title">Pick Your Dream Neighborhood</h2>
+            <p class="section-subtitle">Select a prestigious area to see current availability and starting prices.</p>
+        </div>
+        <div class="neighborhood-pills">
+            <button class="pill-btn" data-neighborhood="Banana Island">Banana Island <span class="price-tag">₦550M+</span></button>
+            <button class="pill-btn" data-neighborhood="Ikoyi">Ikoyi <span class="price-tag">₦420M+</span></button>
+            <button class="pill-btn" data-neighborhood="Lekki Phase 1">Lekki Phase 1 <span class="price-tag">₦320M+</span></button>
+            <button class="pill-btn" data-neighborhood="Maitama">Maitama <span class="price-tag">₦480M+</span></button>
+            <button class="pill-btn" data-neighborhood="Asokoro">Asokoro <span class="price-tag">₦380M+</span></button>
+            <button class="pill-btn" data-neighborhood="GRA Port Harcourt">GRA Port Harcourt <span class="price-tag">₦290M+</span></button>
+            <button class="pill-btn" data-neighborhood="Old GRA">Old GRA <span class="price-tag">₦250M+</span></button>
+        </div>
+        <div class="neighborhood-result" id="neighborhood-result">
+            <div class="result-content">
+                <h3 id="result-title"></h3>
+                <p id="result-details"></p>
+                <button class="notify-btn" id="notify-btn">Notify Me When Available</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing / Service Tiers Section -->
+    <section id="pricing" class="section pricing">
+        <div class="section-header">
+            <h2 class="section-title">Our Service Tiers</h2>
+            <p class="section-subtitle">Choose the level of service that matches your needs and preferences.</p>
+        </div>
+        <div class="pricing-cards">
+            <!-- Self-Service Tier -->
+            <div class="pricing-card">
+                <h3 class="tier-name">Self-Service</h3>
+                <p class="tier-price">₦0</p>
+                <p class="tier-description">Access to our complete property database with basic filtering tools.</p>
+                <ul class="tier-features">
+                    <li>✓ Full property listings access</li>
+                    <li>✓ Basic search filters</li>
+                    <li>✓ Property photos &amp; details</li>
+                    <li>✓ Save favorite properties</li>
+                </ul>
+                <a href="#book-viewing" class="btn-outline">Get Started Free</a>
+            </div>
+            <!-- Guided Tier (Most Popular) -->
+            <div class="pricing-card popular">
+                <h3 class="tier-name">Guided</h3>
+                <p class="tier-price">2% of purchase price</p>
+                <p class="tier-description">Most Popular - Full service with personal agent support throughout.</p>
+                <ul class="tier-features">
+                    <li>✓ Dedicated personal agent</li>
+                    <li>✓ Property viewings arranged</li>
+                    <li>✓ Price negotiation support</li>
+                    <li>✓ Paperwork &amp; legal guidance</li>
+                    <li>✓ Market insights &amp; valuations</li>
+                </ul>
+                <a href="#book-viewing" class="btn-primary">Choose This Plan</a>
+            </div>
+            <!-- White-Glove Concierge Tier -->
+            <div class="pricing-card">
+                <h3 class="tier-name">White-Glove Concierge</h3>
+                <p class="tier-price">3.5% of purchase price</p>
+                <p class="tier-description">Ultimate luxury service with end-to-end lifestyle management.</p>
+                <ul class="tier-features">
+                    <li>✓ All Guided features</li>
+                    <li>✓ Interior design consultation</li>
+                    <li>✓ Moving &amp; relocation coordination</li>
+                    <li>✓ Property management setup</li>
+                    <li>✓ 24/7 concierge support</li>
+                    <li>✓ Exclusive off-market access</li>
+                </ul>
+                <a href="#book-viewing" class="btn-outline">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom Gallery Marquee -->
+    <section id="bottom-marquee" class="section bottom-marquee">
+        <div class="marquee-gallery">
+            <div class="marquee-track">
+                <img src="https://images.unsplash.com/photo-1600566753522-57f45d130084?auto=format&fit=crop&w=400&q=60"
+                     alt="Luxury home" class="marquee-img" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1583608205111-88f00a4e72c1?auto=format&fit=crop&w=400&q=60"
+                     alt="Luxury home" class="marquee-img" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1613490493646-386b2b0aa0fb?auto=format&fit=crop&w=400&q=60"
+                     alt="Luxury home" class="marquee-img" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991746361?auto=format&fit=crop&w=400&q=60"
+                     alt="Luxury home" class="marquee-img" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1564013799919-ab600027ff46?auto=format&fit=crop&w=400&q=60"
+                     alt="Luxury home" class="marquee-img" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=60"
+                     alt="Luxury home" class="marquee-img" loading="lazy">
+                <!-- Duplicate set for seamless loop -->
+                <img src="https://images.unsplash.com/photo-1600566753522-57f45d130084?auto=format&fit=crop&w=400&q=60"
+                     alt="Luxury home" class="marquee-img" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1583608205111-88f00a4e72c1?auto=format&fit=crop&w=400&q=60"
+                     alt="Luxury home" class="marquee-img" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1613490493646-386b2b0aa0fb?auto=format&fit=crop&w=400&q=60"
+                     alt="Luxury home" class="marquee-img" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991746361?auto=format&fit=crop&w=400&q=60"
+                     alt="Luxury home" class="marquee-img" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1564013799919-ab600027ff46?auto=format&fit=crop&w=400&q=60"
+                     alt="Luxury home" class="marquee-img" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=60"
+                     alt="Luxury home" class="marquee-img" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="final-cta" class="section final-cta">
+        <div class="cta-content">
+            <h2 class="cta-title">Paradise on a Budget.</h2>
+            <p class="cta-subtitle">Your dream luxury home is waiting. Take the first step today.</p>
+            <a href="#book-viewing" class="btn-primary cta-button-large">Book Your Private Viewing</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 5L10 35H30L20 5Z" fill="none" stroke="#FBF6EC" stroke-width="1.5"/>
+                    <polyline points="15,20 20,15 25,20" fill="none" stroke="#FBF6EC" stroke-width="1.5"/>
+                </svg>
+                <div class="footer-logo-text">
+                    <span>IZZY</span>
+                    <span class="agency">HOUSING AGENCY</span>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="footer-social">
+                <a href="#" aria-label="Instagram">📷</a>
+                <a href="#" aria-label="Twitter">🐦</a>
+                <a href="#" aria-label="Facebook">👍</a>
+            </div>
+            <p class="footer-copyright">&copy; 2026 Izzy Housing Agency. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
