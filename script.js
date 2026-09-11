@@ -1,22 +1,30 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Preloader
+    // Preloader - Fixed & Compatible Version
     const preloader = document.getElementById('preloader');
     const counter = preloader.querySelector('.counter');
-    let count = 0;
-    const duration = 1500; // 1.5s
-    const startTime = performance.now();
 
-    function updateCounter(timestamp) {
-        const elapsed = timestamp - startTime;
+    // Safety check
+    if (!preloader || !counter) {
+        console.warn('Preloader elements not found');
+        return;
+    }
+
+    let count = 0;
+    const duration = 1500; // 1.5 seconds
+    const startTime = Date.now(); // More universally compatible than performance.now()
+
+    function updateCounter() {
+        const elapsed = Date.now() - startTime;
         const progress = Math.min(elapsed / duration, 1);
         count = Math.floor(progress * 100);
-        counter.textContent = count + '<span>%</span>';
-        counter.innerHTML = count + '<span>%</span>';
+
+        // Safely update the counter
+        counter.innerHTML = `${count}<span>%</span>`;
 
         if (progress < 1) {
             requestAnimationFrame(updateCounter);
         } else {
-            // Preloader complete, fade out
+            // Preloader complete - fade out smoothly
             setTimeout(() => {
                 preloader.style.opacity = '0';
                 setTimeout(() => {
@@ -26,7 +34,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    requestAnimationFrame(updateCounter);
+    // Start the animation immediately
+    updateCounter();
 
     // Sticky Nav with Logo Swap
     const nav = document.getElementById('main-nav');
@@ -122,8 +131,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }, howItWorksObserverOptions);
 
     const howItWorksSection = document.getElementById('how-it-works');
-    navObserver.observe(howItWorksSection); // Already observing sections, but we need a separate observer for the scrollytelling
-    // Actually, we'll create a separate observer for the how-it-works section
     const howItWorksSectionObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -227,7 +234,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const target = parseInt(statItem.getAttribute('data-target'));
                 const start = 0;
                 const duration = 2000; // 2s
-                const startTime = performance.now();
+                const startTime = Date.now();
 
                 function updateCount(timestamp) {
                     const elapsed = timestamp - startTime;
@@ -447,13 +454,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add appear class initially hidden
     document.documentElement.style.setProperty('--appear-delay', '0s');
 
-    // Add CSS for appear animation (we'll add it to styles.css but for now we'll note it)
-    // Actually, we'll add it to styles.css later if needed, but for now we'll rely on existing styles
-});
-
-// Add CSS for appear animation (we'll inject it since we can't modify styles.css easily)
-const appearStyle = document.createElement('style');
-appearStyle.textContent = `
+    // Add CSS for appear animation (we'll inject it since we can't modify styles.css easily)
+    const appearStyle = document.createElement('style');
+    appearStyle.textContent = `
     .section {
         opacity: 0;
         transform: translateY(30px);
@@ -484,19 +487,20 @@ appearStyle.textContent = `
         transition-delay: calc(0.2s + (var(--index, 0) * 0.15s));
     }
 `;
-document.head.appendChild(appearStyle);
+    document.head.appendChild(appearStyle);
 
-// Add staggered index to elements for delay effect
-document.addEventListener('DOMContentLoaded', function() {
-    // Add index to grid items
-    const gridItems = document.querySelectorAll('.listings-grid > *, .pricing-cards > *, .neighborhood-pills > *, .stat-item, .testimonial-slide');
-    gridItems.forEach((item, index) => {
-        item.style.setProperty('--index', index);
-    });
+    // Add staggered index to elements for delay effect
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add index to grid items
+        const gridItems = document.querySelectorAll('.listings-grid > *, .pricing-cards > *, .neighborhood-pills > *, .stat-item, .testimonial-slide');
+        gridItems.forEach((item, index) => {
+            item.style.setProperty('--index', index);
+        });
 
-    // Add index to feature list items
-    const featureItems = document.querySelectorAll('.tier-features li');
-    featureItems.forEach((item, index) => {
-        item.style.setProperty('--index', index);
+        // Add index to feature list items
+        const featureItems = document.querySelectorAll('.tier-features li');
+        featureItems.forEach((item, index) => {
+            item.style.setProperty('--index', index);
+        });
     });
 });
