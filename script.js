@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Change button to success state
             this.textContent = 'Viewing Sent ✓';
             this.style.background = 'var(--gold)';    // ✅ fixed
-this.style.color = 'var(--charcoal)';      // ✅ fixed
+            this.style.color = 'var(--charcoal)';      // ✅ fixed
             this.style.cursor = 'default';
         }, 2000);
     });
